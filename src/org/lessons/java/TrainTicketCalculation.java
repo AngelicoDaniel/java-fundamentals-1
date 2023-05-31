@@ -1,5 +1,6 @@
 package org.lessons.java;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class TrainTicketCalculation {
@@ -20,6 +21,9 @@ public class TrainTicketCalculation {
             price -= price * 0.4;
         }
 
-        System.out.println("il prezzo del biglietto è: " + price + " €" );
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+        String finalPrice = decimalFormat.format(price);
+
+        System.out.println("il prezzo del biglietto è: " + finalPrice + " €" );
     }
 }
